@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Repuestos - MotoWebSite</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+    <header>
+        <h1>Repuestos</h1>
+        <nav>
+            <button onclick="location.href='repuestos.html'" class="activo">Repuestos</button>
+            <button onclick="location.href='talleres.html'">Talleres Mecánicos</button>
+            <button onclick="location.href='lujos.html'">Lujos y Accesorios</button>
+        </nav>
+        <div class="busqueda">
+            <input type="text" id="buscarProducto" placeholder="Busque el Producto" />
+            <button onclick="buscarProducto()"><span>🔍</span></button>
+        </div>
+    </header>
+
+    <main class="productos-grid">
+        <article class="producto">
+            <img src="imagenes/carb_dt125.png" alt="Carburador DT125" />
+            <h2>Carburador DT125</h2>
+            <p>Precio <b>$150.000</b></p>
+            <button class="btn-comprar">Comprar 🛒</button>
+        </article>
+        <article class="producto">
+            <img src="imagenes/carb_bws125.png" alt="Carburador BWS 125" />
+            <h2>Carburador BWS 125</h2>
+            <p>Precio <b>$162.000</b></p>
+            <button class="btn-comprar">Comprar 🛒</button>
+        </article>
+        <!-- Agrega más productos según necesites -->
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

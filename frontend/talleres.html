@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Talleres Mecánicos - MotoWebSite</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+    <header>
+        <h1>Talleres Mecánicos</h1>
+        <nav>
+            <button onclick="location.href='repuestos.html'">Repuestos</button>
+            <button onclick="location.href='talleres.html'" class="activo">Talleres Mecánicos</button>
+            <button onclick="location.href='lujos.html'">Lujos y Accesorios</button>
+        </nav>
+    </header>
+
+    <section class="taller-info">
+        <img src="imagenes/mecanico_trabajando.jpg" alt="Mecánico trabajando" />
+        <div class="descripcion">
+            <p>Tu mecánico de confianza a un clic de distancia.</p>
+            <label for="sede">Seleccione Sede:</label>
+            <select id="sede">
+                <option value="">-- Seleccione --</option>
+                <option value="central">Sede Central</option>
+                <option value="norte">Sede Norte</option>
+                <option value="sur">Sede Sur</option>
+            </select>
+            <div class="botones">
+                <button onclick="reservar()">Reservar</button>
+                <button onclick="location.href='repuestos.html'">Atrás</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function reservar() {
+            const sede = document.getElementById('sede').value;
+            if (!sede) {
+                alert('Por favor seleccione una sede.');
+                return;
+            }
+            alert(`Reserva realizada para la sede: ${sede}`);
+        }
+    </script>
+</body>
+</html>

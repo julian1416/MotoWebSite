@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lujos y Accesorios - MotoWebSite</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+    <header>
+        <h1>Lujos y Accesorios</h1>
+        <nav>
+            <button onclick="location.href='repuestos.html'">Repuestos</button>
+            <button onclick="location.href='talleres.html'">Talleres Mecánicos</button>
+            <button onclick="location.href='lujos.html'" class="activo">Lujos y Accesorios</button>
+        </nav>
+        <div class="busqueda">
+            <label for="moto">Seleccione su moto:</label>
+            <select id="moto">
+                <option value="">-- Seleccione --</option>
+                <option value="ns200">NS 200</option>
+                <option value="pulsar">Pulsar</option>
+                <!-- Más modelos -->
+            </select>
+        </div>
+    </header>
+
+    <main class="productos-grid">
+        <article class="producto">
+            <img src="imagenes/estabilizador.png" alt="Estabilizador Barras NS 200" />
+            <h2>Estabilizador Barras NS 200</h2>
+            <p>Precio <b>$150.000</b></p>
+            <button class="btn-comprar">Comprar 🛒</button>
+        </article>
+        <article class="producto">
+            <img src="imagenes/defensa.png" alt="Defensa Stun NS 200" />
+            <h2>Defensa Stun NS 200</h2>
+            <p>Precio <b>$145.000</b></p>
+            <button class="btn-comprar">Comprar 🛒</button>
+        </article>
+        <article class="producto">
+            <img src="imagenes/portaplaca.png" alt="Portaplaca NS 200" />
+            <h2>Portaplaca NS 200</h2>
+            <p>Precio <b>$28.000</b></p>
+            <button class="btn-comprar">Comprar 🛒</button>
+        </article>
+    </main>
+</body>
+</html>

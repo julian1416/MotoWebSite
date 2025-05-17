@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0d9dc;
+    margin: 0;
+    padding: 10px 20px;
+    color: #222;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px dotted black;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: darkred;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav button {
+    background: #fff;
+    border: 1px solid black;
+    padding: 5px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+nav button.activo, nav button:hover {
+    background: black;
+    color: white;
+}
+
+.busqueda input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.busqueda button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    background: white;
+    border: 1px solid #999;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.producto img {
+    width: 100px;
+    height: auto;
+}
+
+.producto h2 {
+    font-size: 16px;
+    color: darkred;
+    margin: 10px 0 5px 0;
+}
+
+.btn-comprar {
+    background-color: #c40000;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.taller-info {
+    background-color: #8cc0e8;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.taller-info img {
+    width: 250px;
+    border-radius: 6px;
+}
+
+.descripcion {
+    flex: 1;
+    color: white;
+    font-size: 18px;
+}
+
+.descripcion select {
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.botones button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+.botones button:first-child {
+    background-color: #0066cc;
+    color: white;
+}
+
+.botones button:last-child {
+    background-color: #ccc;
+}

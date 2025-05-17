@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - MotoWebSite</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body {
+            background-color: #d0d9dc;
+            font-family: Arial, sans-serif;
+        }
+        .registro-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .registro-container h2 {
+            text-align: center;
+            color: darkred;
+            margin-bottom: 20px;
+        }
+        .registro-container input,
+        .registro-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+        .registro-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #c40000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .registro-container button:hover {
+            background-color: #a30000;
+        }
+        .mensaje-error {
+            color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registro-container">
+        <h2>Crear Cuenta</h2>
+        <form id="formRegistro">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="contrasena" placeholder="Contraseña" required>
+            <input type="password" id="confirmar" placeholder="Confirmar contraseña" required>
+            <select id="tipoUsuario" required>
+                <option value="">Seleccione tipo de usuario</option>
+                <option value="cliente">Cliente</option>
+                <option value="mecanico">Mecánico</option>
+                <option value="admin">Administrador</option>
+            </select>
+            <div class="mensaje-error" id="mensajeError">Las contraseñas no coinciden.</div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formRegistro').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const pass = document.getElementById('contrasena').value;
+            const confirm = document.getElementById('confirmar').value;
+            const errorMsg = document.getElementById('mensajeError');
+
+            if (pass !== confirm) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            errorMsg.style.display = 'none';
+
+            // Aquí podrías enviar los datos con fetch al backend PHP
+            alert("Registro exitoso (simulado). Aquí se enviaría al backend.");
+        });
+    </script>
+
+</body>
+</html>
